@@ -27,7 +27,11 @@ public class HelloWorldController {
     public void save() {
         User user = userRepository.findById(1L).orElse(null);
         assert user != null;
-        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        user.setPassword(passwordEncoder.encode("123456"));
         userRepository.save(user);
+        User user2 = userRepository.findById(2L).orElse(null);
+        assert user2 != null;
+        user2.setPassword(passwordEncoder.encode("123456"));
+        userRepository.save(user2);
     }
 }
