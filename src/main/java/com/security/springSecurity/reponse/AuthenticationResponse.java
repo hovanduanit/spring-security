@@ -1,13 +1,14 @@
 package com.security.springSecurity.reponse;
 
+import lombok.Getter;
+
+@Getter
 public class AuthenticationResponse {
-    private final String jwt;
+    private final String token;
+    private final String refreshToken;
 
-    public AuthenticationResponse(String jwt) {
-        this.jwt = jwt;
-    }
-
-    public String getJwt() {
-        return jwt;
+    public AuthenticationResponse(String token, String refreshToken) {
+        this.token = token;
+        this.refreshToken = refreshToken;
     }
 }

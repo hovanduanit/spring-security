@@ -17,6 +17,10 @@ public class HelloWorldController {
     public String getHelloWorld() {
         return "Hello world";
     }
+//    @GetMapping("/authenticate")
+//    public String getHelloWorldAuthenticate() {
+//        return "Hello world authenticate";
+//    }
 
     @GetMapping("/anonymous/hello")
     public String getHelloWorldAnonymous() {
